@@ -1,0 +1,17 @@
+# 修改文件 gitlab.rb
+
+# 外部可访问URL，如果没有请配置本地hostname
+external_url 'http://www.githook.com'
+
+# 本地postfix配置
+# 关于本地邮箱测试使用： echo "Test mail from postfix" | mail -s "Test Postfix" gitmail@gitmail.com
+# gitmail为本地用户
+### Email Settings
+gitlab_rails['gitlab_email_enabled'] = true
+gitlab_rails['gitlab_email_from'] = 'gitmail@gitmail.com'
+gitlab_rails['gitlab_email_display_name'] = 'gitmail'
+# 接收邮箱地址
+gitlab_rails['gitlab_email_reply_to'] = 'gitmail@gitmail.com'
+gitlab_rails['gitlab_email_subject_suffix'] = ''
+
+
